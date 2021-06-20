@@ -41,6 +41,9 @@ public class DatabaseConfiguration {
 		return false;
 	}
 	
+	/**
+	 * not essential needed, but why not?
+	 */
 	public static void closeConnection() {
 		try {
 			connection.close();
@@ -64,8 +67,8 @@ public class DatabaseConfiguration {
 					+ "bill_id INTEGER, "
 					+ "market VARCHAR(25), "
 					+ "date DATE, "
-					+ "price DOUBLE, "
-					+ "article_id INTEGER)");
+					+ "price FLOAT, "
+					+ "article_id INTEGER)"); 
 			statement.executeUpdate("CREATE table article (id INTEGER primary key, "
 					+ "description VARCHAR(50), "
 					+ "created DATE, "
